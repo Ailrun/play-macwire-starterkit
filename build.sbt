@@ -13,6 +13,7 @@ libraryDependencies ++= Seq(
   "com.softwaremill.macwire" %% "macrosakka" % macwireVersion % "provided",
   "com.softwaremill.macwire" %% "util" % macwireVersion,
   "com.softwaremill.macwire" %% "proxy" % macwireVersion,
+  "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
 )
 
 libraryDependencies += "org.scala-lang" % "scala-compiler" % scalaVersion.value
