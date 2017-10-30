@@ -6,13 +6,16 @@ import play.api.mvc.AnyContentAsEmpty
 import play.api.test.{ FakeRequest, FakeHeaders }
 import play.api.test.Helpers._
 
-class ApplicationControllerSpec extends PlaySpec
+class ApplicationControllerSpec
+    extends PlaySpec
     with BaseOneAppPerTest
     with AppFactory
     with ScalaFutures
 {
-  "ApplicationController" should {
-    "render index page at /" in {
+  "ApplicationController" should
+  {
+    "render index page at /" in
+    {
       lazy val headers =
         new FakeHeaders(Seq(
           HeaderNames.HOST -> "localhost:9000"
@@ -25,7 +28,8 @@ class ApplicationControllerSpec extends PlaySpec
       contentAsString(index) must include ("Hello")
     }
 
-    "returns headers at /echo" in {
+    "returns headers at /echo" in
+    {
       lazy val headers =
         new FakeHeaders(Seq(
           "hi" -> "there",

@@ -5,8 +5,11 @@ import play.api._
 import play.api.inject._
 import play.core.DefaultWebCommands
 
-trait AppFactory extends FakeApplicationFactory {
-  override def fakeApplication: Application = {
+trait AppFactory
+    extends FakeApplicationFactory
+{
+  override def fakeApplication: Application =
+  {
     val env = Environment.simple(new File("."))
     val configuration = Configuration.load(env)
     val context = ApplicationLoader.Context(
